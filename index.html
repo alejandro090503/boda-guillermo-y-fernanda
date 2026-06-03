@@ -195,7 +195,7 @@ section{padding:60px 26px;}
 .itv3-gem{
   width:9px;height:9px;
   background:linear-gradient(135deg,#cfc1af 30%,#6a4f2a);
-  transform:rotate(45deg);border-radius:2px;
+  border-radius:2px;
   box-shadow:0 0 0 4px rgba(154,122,74,0.12),0 0 18px rgba(154,122,74,0.45);
   margin-bottom:18px;flex-shrink:0;
 }
@@ -255,23 +255,74 @@ section{padding:60px 26px;}
 .photo-moment:nth-child(odd) img{animation-duration:5.5s;}
 .photo-moment:nth-child(even) img{animation-duration:6.5s;animation-delay:.8s;}
 
-/* ── RSVP ── */
-.rsvp-card{background:var(--card);border-radius:18px;padding:28px 22px;box-shadow:0 6px 36px rgba(58,42,26,.08);}
-.rsvp-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--text);text-align:center;line-height:1.75;margin-bottom:22px;}
+/* ── RSVP estilo editorial (boda-jennifer) ── */
+#srsvp{background:var(--surface);}
+.rsvp-card{
+  max-width:420px;margin:0 auto;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(154,122,74,.38);
+  padding:44px 32px 36px;
+  position:relative;
+  box-shadow:0 24px 64px rgba(58,42,26,.10),0 4px 20px rgba(154,122,74,.12);
+}
+.rsvp-card::before{
+  content:"";position:absolute;inset:10px;
+  border:1px solid rgba(154,122,74,.18);pointer-events:none;
+}
+.rsvp-corner{position:absolute;width:48px;height:48px;pointer-events:none;}
+.rsvp-corner--tl{top:0;left:0;}
+.rsvp-corner--tr{top:0;right:0;transform:scaleX(-1);}
+.rsvp-corner--bl{bottom:0;left:0;transform:scaleY(-1);}
+.rsvp-corner--br{bottom:0;right:0;transform:scale(-1,-1);}
+.rsvp-inner{text-align:center;}
+.rsvp-ornament{display:block;margin:0 auto 24px;width:min(260px,72vw);height:auto;}
+.rsvp-title{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(36px,10vw,50px);
+  color:var(--dark);margin-bottom:14px;line-height:1.15;
+}
+.rsvp-intro{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:16px;font-weight:500;color:var(--text);
+  line-height:1.8;margin-bottom:28px;
+}
+.rsvp-divider{
+  display:flex;align-items:center;gap:12px;
+  margin:0 auto 28px;max-width:260px;
+}
+.rsvp-divider::before,.rsvp-divider::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(to right,transparent,rgba(154,122,74,.45),transparent);
+}
+.rsvp-divider-gem{color:var(--gold);flex-shrink:0;opacity:.8;font-size:12px;}
 .btn-confirmar{
   display:flex;align-items:center;justify-content:center;gap:10px;
   width:100%;padding:17px;min-height:54px;
   background:linear-gradient(135deg,#5a3e22 0%,#9a7a4a 50%,#5a3e22 100%);
   background-size:200% 100%;color:#fff;
-  border-radius:30px;border:none;cursor:pointer;touch-action:manipulation;
+  border:none;cursor:pointer;touch-action:manipulation;
   font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;
   font-style:italic;letter-spacing:3px;text-transform:uppercase;
   transition:background-position .5s ease,transform .25s ease,box-shadow .25s ease;
   box-shadow:0 4px 22px rgba(154,122,74,.3);
-  text-decoration:none;
+  text-decoration:none;position:relative;overflow:hidden;
 }
-.btn-confirmar:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 8px 30px rgba(154,122,74,.45);}
-.rsvp-deadline{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;color:var(--gold);margin-top:14px;opacity:.85;}
+.btn-confirmar::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,#9a7a4a 0%,#cfc1af 50%,#9a7a4a 100%);
+  opacity:0;transition:opacity .4s;
+}
+.btn-confirmar:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(154,122,74,.4);}
+.btn-confirmar:hover::after{opacity:1;}
+.btn-confirmar > *{position:relative;z-index:1;}
+.rsvp-deadline{
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:20px;
+  font-family:'Montserrat',sans-serif;font-size:10px;
+  letter-spacing:.35em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;padding-left:.35em;
+}
 
 /* ── ENVELOPE ── */
 #envelope-screen{position:fixed;inset:0;z-index:10000;overflow:hidden;cursor:pointer;opacity:0;background:#3a2a1a;}
@@ -459,9 +510,9 @@ footer .fc a{color:inherit;text-decoration:none;}
 
   <!-- UBICACIÓN — solo recepción -->
   <section id="subic">
-    <h2 class="sec-title rv">La Celebración</h2>
+    <h2 class="sec-title rv">Recepción</h2>
     <div class="loc-card rv" id="lc1">
-      <div class="lt">Recepción</div>
+      <div class="lt">Social 90</div>
       <div class="ls">Fiesta · Celebración · Baile</div>
       <div class="lh">6:30 pm</div>
       <p style="margin-top:10px;">Matamoros, Tamaulipas</p>
@@ -505,31 +556,31 @@ footer .fc a{color:inherit;text-decoration:none;}
       <div class="itv3-track"></div>
       <div class="itv3-glow" id="itvGlow"></div>
 
-      <div class="itv3-item rv">
+      <div class="itv3-item">
         <div class="itv3-gem"></div>
         <div class="itv3-time">6:30</div>
         <div class="itv3-ev">Recepción en Salón</div>
       </div>
 
-      <div class="itv3-item rv">
+      <div class="itv3-item">
         <div class="itv3-gem itv3-gem-gray"></div>
         <div class="itv3-time">7:30</div>
         <div class="itv3-ev">Cena</div>
       </div>
 
-      <div class="itv3-item rv">
+      <div class="itv3-item">
         <div class="itv3-gem itv3-gem-mid"></div>
         <div class="itv3-time">8:00</div>
         <div class="itv3-ev">Sorpresa</div>
       </div>
 
-      <div class="itv3-item rv">
+      <div class="itv3-item">
         <div class="itv3-gem itv3-gem-gray"></div>
         <div class="itv3-time">8:15</div>
         <div class="itv3-ev">Brindis de los Prometidos</div>
       </div>
 
-      <div class="itv3-item rv">
+      <div class="itv3-item">
         <div class="itv3-gem"></div>
         <div class="itv3-time">8:30</div>
         <div class="itv3-ev">Baile</div>
@@ -714,20 +765,51 @@ footer .fc a{color:inherit;text-decoration:none;}
     </svg>
   </div>
 
-  <!-- RSVP — botón único WhatsApp -->
-  <section class="rv" id="srsvp">
-    <div class="eyebrow">Confirma tu Asistencia</div>
-    <h2 class="sec-title">R.S.V.P.</h2>
-    <div class="rsvp-card">
-      <p class="rsvp-intro">
-        Confírmanos tu asistencia antes del<br>
-        <strong style="font-style:normal;color:var(--dark);">14 de junio de 2026</strong>
-      </p>
-      <a class="btn-confirmar" id="rsvpWaBtn" href="#" target="_blank" rel="noopener">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Confirmar Asistencia
-      </a>
-      <p class="rsvp-deadline">Fecha límite: 14 de junio de 2026</p>
+  <!-- RSVP — botón único WhatsApp, diseño editorial -->
+  <section id="srsvp">
+    <div class="eyebrow rv">Confirma tu Asistencia</div>
+    <div class="rsvp-card rv">
+      <!-- Esquinas decorativas -->
+      <svg class="rsvp-corner rsvp-corner--tl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--tr" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--bl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--br" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
+
+      <div class="rsvp-inner">
+        <!-- Ornamento SVG -->
+        <svg class="rsvp-ornament" viewBox="0 0 280 48" fill="none" aria-hidden="true">
+          <g stroke="var(--gold)" stroke-width=".9" opacity=".8" fill="none">
+            <path d="M16 24 Q42 10 68 24 Q88 36 108 24"/>
+            <path d="M172 24 Q192 36 212 24 Q238 10 264 24"/>
+            <circle cx="140" cy="24" r="5.5"/>
+            <circle cx="140" cy="24" r="2" fill="var(--gold)" stroke="none"/>
+            <path d="M129 24 L134 24" opacity=".5"/>
+            <path d="M146 24 L151 24" opacity=".5"/>
+            <path d="M134 16 Q140 10 146 16" opacity=".55"/>
+            <path d="M134 32 Q140 38 146 32" opacity=".55"/>
+          </g>
+        </svg>
+
+        <h2 class="rsvp-title">R.S.V.P.</h2>
+        <p class="rsvp-intro">
+          Confírmanos tu asistencia antes del<br>
+          <strong style="font-style:normal;color:var(--dark);">14 de junio de 2026</strong>
+        </p>
+
+        <div class="rsvp-divider">
+          <span class="rsvp-divider-gem">✦</span>
+        </div>
+
+        <a class="btn-confirmar" id="rsvpWaBtn" href="#" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Confirmar Asistencia</span>
+        </a>
+
+        <div class="rsvp-deadline">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
+          Fecha límite · 14 de junio de 2026
+        </div>
+      </div>
     </div>
   </section>
 
@@ -881,32 +963,45 @@ function initItinerary(){
   var glow = document.getElementById('itvGlow');
   var section = document.getElementById('siti');
   var items = document.querySelectorAll('.itv3-item');
-  if(!glow||!section) return;
-  ScrollTrigger.create({trigger:section,start:'top 58%',end:'bottom 42%',scrub:1.8,
-    onUpdate:function(self){
-      var track=section.querySelector('.itv3-track');
+  if(!glow || !section) return;
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top 58%',
+    end: 'bottom 42%',
+    scrub: 1.8,
+    onUpdate: function(self){
+      var track = section.querySelector('.itv3-track');
       if(!track) return;
-      var h=track.offsetHeight-55;
-      glow.style.top=(self.progress*h)+'px';
+      var h = track.offsetHeight - 55;
+      glow.style.top = (self.progress * h) + 'px';
     }
   });
-  items.forEach(function(item){
-    var gem=item.querySelector('.itv3-gem');
-    var isGray=gem.classList.contains('itv3-gem-gray');
-    var gc=isGray?'160,160,160':'207,193,175';
-    gsap.fromTo(gem,{scale:0,opacity:0},{scale:1,opacity:1,duration:0.6,ease:'back.out(2.8)',
-      scrollTrigger:{trigger:item,start:'top 86%',once:true},
-      onComplete:function(){
-        gsap.timeline()
-          .to(gem,{scale:1.4,filter:'drop-shadow(0 0 20px rgba('+gc+',1))',duration:0.3,ease:'power2.out'})
-          .to(gem,{scale:1,  filter:'drop-shadow(0 0 5px rgba('+gc+',0.35))',duration:0.28,ease:'power2.in'})
-          .to(gem,{scale:1.2,filter:'drop-shadow(0 0 14px rgba('+gc+',0.8))',duration:0.22,ease:'power2.out'})
-          .to(gem,{scale:1,  filter:'drop-shadow(0 0 4px rgba('+gc+',0.25))',duration:0.32,ease:'power2.in'});
-      }
-    });
-    var els=[item.querySelector('.itv3-time'),item.querySelector('.itv3-ev'),item.querySelector('.itv3-sub')].filter(Boolean);
-    gsap.fromTo(els,{y:14,opacity:0},{y:0,opacity:1,duration:0.8,ease:'power2.out',stagger:0.08,
-      scrollTrigger:{trigger:item,start:'top 86%',once:true}});
+
+  items.forEach(function(item, i){
+    var gem    = item.querySelector('.itv3-gem');
+    var isGray = gem.classList.contains('itv3-gem-gray');
+    var gc     = isGray ? '160,160,160' : '207,193,175';
+
+    gsap.set(gem, {rotation: 45});
+    gsap.fromTo(gem,
+      {scale:0, opacity:0},
+      {scale:1, opacity:1, duration:0.6, ease:'back.out(2.8)',
+       scrollTrigger:{trigger:item, start:'top 86%', once:true},
+       onComplete:function(){
+         gsap.timeline()
+           .to(gem,{scale:1.4, filter:'drop-shadow(0 0 20px rgba('+gc+',1))',   duration:0.3, ease:'power2.out'})
+           .to(gem,{scale:1,   filter:'drop-shadow(0 0 5px rgba('+gc+',0.35))', duration:0.28,ease:'power2.in'})
+           .to(gem,{scale:1.2, filter:'drop-shadow(0 0 14px rgba('+gc+',0.8))', duration:0.22,ease:'power2.out'})
+           .to(gem,{scale:1,   filter:'drop-shadow(0 0 4px rgba('+gc+',0.25))', duration:0.32,ease:'power2.in'});
+       }
+      });
+
+    var els = [item.querySelector('.itv3-time'), item.querySelector('.itv3-ev'), item.querySelector('.itv3-sub')].filter(Boolean);
+    gsap.fromTo(els,
+      {y:14, opacity:0},
+      {y:0, opacity:1, duration:0.8, ease:'power2.out', stagger:0.08,
+       scrollTrigger:{trigger:item, start:'top 86%', once:true}});
   });
 }
 
@@ -1007,6 +1102,10 @@ function tryAutoMusic(){
   }
 }
 function startMusic(){ showMusicBtn(); if(!musicEl) return; musicEl.play().catch(function(){}); }
+
+/* ── RSVP card entrance ── */
+gsap.fromTo('.rsvp-card',{opacity:0,y:40,scale:.97},{opacity:1,y:0,scale:1,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%'}});
+gsap.fromTo('.rsvp-corner',{opacity:0,scale:.5},{opacity:1,scale:1,duration:1,stagger:.08,ease:'back.out(2)',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%'}});
 </script>
 </body>
 </html>
