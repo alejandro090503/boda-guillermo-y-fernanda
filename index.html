@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Guillermo &amp; Fernanda · Boda · 4 Julio 2026</title>
+<meta name="description" content="Invitación de boda de Guillermo David Quintero Salazar y Fernanda Lara Torres · 4 de julio de 2026 · Matamoros, Tamaulipas">
+<!-- Open Graph / WhatsApp preview -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://boda-guillermo-y-fernanda.vercel.app/">
+<meta property="og:title"       content="Guillermo &amp; Fernanda · Boda · 4 Julio 2026">
+<meta property="og:description" content="Nos casamos el 4 de julio de 2026 en Matamoros, Tamaulipas. ¡Estás invitado!">
+<meta property="og:image"       content="https://boda-guillermo-y-fernanda.vercel.app/sobre.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:image"      content="https://boda-guillermo-y-fernanda.vercel.app/sobre.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Montserrat',sans-serif;font-weight:400;font-size:16px;
+  color:#3a2a1a;background:#fafaf7;line-height:1.6;overflow-x:hidden;
+}
+:root{
+  --bg:#fafaf7;
+  --surface:#f0ebe3;
+  --paper:#ffffff;
+  --card:#ffffff;
+  --accent:#635036;
+  --accent-soft:#8a6f50;
+  --accent-deep:#3d2c18;
+  --gold:#9a7a4a;
+  --gold-light:#cfc1af;
+  --gold-deep:#6a4f2a;
+  --dark:#3a2a1a;
+  --text:#4a3828;
+  --ink-soft:#7a6550;
+  --champagne:#cfc1af;
+}
+.wrap{max-width:430px;margin:0 auto;background:var(--bg);position:relative;overflow:clip;z-index:1;}
+
+/* ── PARTÍCULAS CHAMPAGNE ── */
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.star{
+  position:absolute;top:-20px;opacity:0;
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+
+/* ── HERO ── */
+.hero{position:relative;width:100%;min-height:100dvh;display:flex;flex-direction:column;background:#3a2a1a;}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/b4b7737b-1a85-4c1c-99c0-baa28121c0c2/1779772541079-4.jpeg') center top/cover no-repeat;
+}
+.hero-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(58,42,26,0.10) 0%,
+    rgba(58,42,26,0.05) 30%,
+    rgba(58,42,26,0.45) 62%,
+    rgba(58,42,26,0.88) 82%,
+    #fafaf7 100%
+  );
+}
+.hero-bottom{position:relative;z-index:3;margin-top:auto;padding:0 28px 60px;text-align:center;}
+.hero-eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:17px;letter-spacing:4px;text-transform:uppercase;
+  color:#ffffff;margin-bottom:12px;opacity:0;
+  text-shadow:0 1px 8px rgba(0,0,0,.45);
+}
+.hero-names{
+  font-family:'Great Vibes',cursive;font-size:62px;line-height:1.05;
+  color:#FFFFFF;margin-bottom:14px;
+  text-shadow:0 3px 32px rgba(58,42,26,.6);
+  transform:translateY(30px);opacity:0;
+}
+.hero-amp{
+  font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;
+  color:var(--gold-light);display:block;letter-spacing:6px;margin:2px 0;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:12px;padding:8px 24px;
+  border:1px solid rgba(207,193,175,.5);border-radius:30px;
+  background:rgba(58,42,26,.4);backdrop-filter:blur(4px);
+  transform:translateY(16px);opacity:0;
+}
+.hero-badge span{
+  font-family:'Cormorant Garamond',serif;font-size:15px;letter-spacing:5px;
+  text-transform:uppercase;
+  background:linear-gradient(135deg,#cfc1af 0%,#f0e8dc 40%,#a89880 60%,#e8dece 80%,#cfc1af 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-weight:600;
+}
+
+/* ── ORNAMENTO ── */
+.orn{display:flex;justify-content:center;padding:10px 0;}
+.orn svg{width:220px;height:24px;overflow:visible;}
+.orn-star{
+  transform-box:fill-box;transform-origin:center;
+  animation:orn-spin 24s linear infinite;
+  filter:drop-shadow(0 0 3px rgba(154,122,74,.45));
+}
+.orn-dot{animation:orn-wave 3.4s ease-in-out infinite;}
+.orn-dot:nth-of-type(2),.orn-dot:nth-of-type(5){animation-delay:.38s;}
+.orn-dot:nth-of-type(3),.orn-dot:nth-of-type(4){animation-delay:.76s;}
+.orn-line{animation:orn-breathe 3.4s ease-in-out infinite;}
+.orn-line:nth-of-type(2){animation-delay:.17s;}
+@keyframes orn-spin{to{transform:rotate(360deg);}}
+@keyframes orn-wave{0%,100%{opacity:.28;}50%{opacity:.82;}}
+@keyframes orn-breathe{0%,100%{opacity:.3;}50%{opacity:.65;}}
+@media(prefers-reduced-motion:reduce){
+  .orn-star,.orn-dot,.orn-line{animation:none;}
+}
+
+/* ── FECHA ── */
+.fecha-sec{padding:28px 26px 10px;text-align:center;}
+.fecha-line{display:flex;align-items:center;justify-content:center;gap:16px;}
+.fecha-line .fl-bar{flex:1;max-width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold));opacity:.55;}
+.fecha-line .fl-bar.right{background:linear-gradient(to left,transparent,var(--gold));}
+.fecha-txt{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;letter-spacing:6px;text-transform:uppercase;color:var(--dark);}
+
+/* ── SECCIONES ── */
+section{padding:60px 26px;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:8px;}
+.sec-title{font-family:'Great Vibes',cursive;font-size:52px;color:var(--dark);text-align:center;line-height:1.1;margin-bottom:30px;}
+
+/* ── MENSAJE ESPECIAL ── */
+.mensaje-card{
+  background:var(--card);border-radius:20px;padding:36px 28px;
+  box-shadow:0 6px 36px rgba(58,42,26,.08);
+  text-align:center;border-top:2px solid var(--gold);
+}
+.mensaje-texto{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:18px;line-height:1.9;color:var(--text);
+  font-weight:500;
+}
+.mensaje-firma{
+  font-family:'Great Vibes',cursive;font-size:36px;
+  color:var(--gold);margin-top:20px;display:block;
+}
+
+/* ── COUNTDOWN ── */
+.cd-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.cd-box{background:var(--card);border-radius:14px;padding:20px 4px;text-align:center;box-shadow:0 6px 36px rgba(58,42,26,.08);border-top:2px solid var(--gold);}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--dark);line-height:1;font-weight:600;font-variant-numeric:tabular-nums;}
+.cd-lbl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:6px;font-weight:500;}
+
+/* ── UBICACIÓN ── */
+.loc-card{
+  background:var(--card);border-radius:18px;padding:28px 22px;
+  box-shadow:0 6px 36px rgba(58,42,26,.08);margin-bottom:18px;text-align:center;
+  border-left:3px solid var(--gold);
+}
+.loc-card .lt{font-family:'Great Vibes',cursive;font-size:42px;color:var(--dark);margin-bottom:4px;}
+.loc-card .ls{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.loc-card p{font-size:15px;font-weight:500;margin:3px 0;line-height:1.6;color:var(--text);}
+.loc-card .lh{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--dark);letter-spacing:3px;margin-top:10px;}
+.btn{
+  display:inline-block;margin-top:16px;padding:13px 30px;
+  background:var(--accent);color:#fff;border-radius:30px;
+  font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;
+  text-transform:uppercase;letter-spacing:3px;text-decoration:none;
+  transition:background .3s,transform .3s;border:none;cursor:pointer;
+}
+.btn:hover{background:var(--accent-deep);transform:translateY(-2px);}
+
+/* ── CALENDAR ── */
+.cal-c{text-align:center;}
+.cal-c p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--dark);margin-bottom:18px;}
+
+/* ── ITINERARIO V3 ── */
+#siti{overflow:visible;padding-left:24px;padding-right:24px;}
+.itv3{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0 10px;}
+.itv3-track{
+  position:absolute;left:50%;transform:translateX(-50%);
+  top:0;bottom:0;width:1px;z-index:0;
+  background:linear-gradient(to bottom,transparent 0%,rgba(154,122,74,0.35) 10%,rgba(154,122,74,0.25) 45%,rgba(154,122,74,0.30) 80%,transparent 100%);
+}
+.itv3-glow{
+  position:absolute;left:50%;transform:translateX(-50%);
+  top:0;width:5px;height:110px;
+  background:linear-gradient(to bottom,transparent,rgba(154,122,74,0.55) 20%,rgba(154,122,74,0.90) 50%,rgba(154,122,74,0.55) 80%,transparent);
+  filter:blur(3px);border-radius:6px;z-index:1;pointer-events:none;
+}
+.itv3-item{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:30px 16px 4px;width:100%;}
+.itv3-gem{
+  width:9px;height:9px;
+  background:linear-gradient(135deg,#cfc1af 30%,#6a4f2a);
+  transform:rotate(45deg);border-radius:2px;
+  box-shadow:0 0 0 4px rgba(154,122,74,0.12),0 0 18px rgba(154,122,74,0.45);
+  margin-bottom:18px;flex-shrink:0;
+}
+.itv3-gem-gray{background:linear-gradient(135deg,#c0c0c0 30%,#5a5a5a);box-shadow:0 0 0 4px rgba(122,122,122,0.14),0 0 18px rgba(122,122,122,0.45);}
+.itv3-gem-mid{background:linear-gradient(135deg,#d4b87e 30%,#6a4a10);box-shadow:0 0 0 4px rgba(154,122,74,0.10),0 0 18px rgba(154,122,74,0.38);}
+.itv3-time{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;letter-spacing:8px;color:var(--dark);line-height:1;margin-bottom:6px;text-indent:8px;}
+.itv3-ev{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;font-weight:500;color:rgba(58,42,26,0.65);letter-spacing:3px;text-transform:uppercase;line-height:1.5;text-indent:3px;}
+.itv3-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;font-weight:500;color:var(--gold);opacity:.85;letter-spacing:1px;margin-top:4px;line-height:1.4;}
+.itv3-item:last-child{padding-bottom:10px;}
+
+/* ── DRESS CODE ── */
+.dc-note{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--dark);margin-bottom:8px;}
+.dc-warn{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;color:var(--gold);margin-bottom:26px;letter-spacing:1px;}
+.dc-figures{display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:6px;}
+.dc-fig{flex:1;display:flex;flex-direction:column;align-items:center;padding:18px 10px 14px;}
+.dc-divider{width:1px;flex-shrink:0;margin:12px 0;background:linear-gradient(to bottom,transparent,var(--gold) 18%,var(--gold) 82%,transparent);}
+.dc-fig-name{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;color:var(--dark);letter-spacing:3px;margin-top:16px;text-transform:uppercase;}
+.dc-fig-hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;font-weight:500;color:var(--gold);letter-spacing:1.5px;margin-top:5px;text-align:center;line-height:1.55;}
+.dc-swatch-wrap{display:flex;gap:14px;justify-content:center;margin:20px 0 6px;flex-wrap:wrap;}
+.dc-swatch{width:38px;height:38px;border-radius:50%;box-shadow:0 2px 8px rgba(58,42,26,.2);display:inline-block;}
+.dc-swatch-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;font-weight:500;color:var(--ink-soft);text-align:center;margin-top:6px;letter-spacing:1px;}
+.dc-avoid{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;font-weight:500;color:var(--ink-soft);text-align:center;margin-top:8px;letter-spacing:1px;}
+#sdc{position:relative;overflow:hidden;}
+.dc-star-layer,.dc-glow-layer{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.dc-glow-layer{background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(154,122,74,0) 0%,transparent 100%);animation:dcGlow 4.2s ease-in-out infinite;}
+@keyframes dcGlow{
+  0%,100%{background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(154,122,74,.0) 0%,transparent 100%);}
+  50%{background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(154,122,74,.11) 0%,rgba(207,193,175,.04) 60%,transparent 100%);}
+}
+.dc-sparkle{position:absolute;pointer-events:none;will-change:transform,opacity;color:var(--gold);filter:drop-shadow(0 0 5px rgba(207,193,175,.95));user-select:none;line-height:1;}
+#sdc .eyebrow,#sdc .sec-title,#sdc .dc-note,#sdc .dc-warn,#sdc .dc-figures,#sdc .dc-swatch-wrap,#sdc .dc-avoid{position:relative;z-index:1;}
+@media(prefers-reduced-motion:reduce){.dc-glow-layer{animation:none;}}
+
+/* ── KIDS POLICY ── */
+.kids-card{background:var(--card);border-radius:18px;padding:28px 24px;box-shadow:0 6px 36px rgba(58,42,26,.08);border-top:2px solid var(--gold);text-align:center;}
+.kids-card p{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;line-height:1.8;color:var(--text);font-style:italic;}
+
+/* ── MESA DE REGALOS ── */
+.gift-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:500;color:var(--text);text-align:center;line-height:1.8;margin-bottom:28px;}
+.lluvia-card{background:var(--card);border-radius:18px;padding:32px 24px;box-shadow:0 6px 36px rgba(58,42,26,.08);border-top:2px solid var(--gold);text-align:center;}
+.lluvia-title{font-family:'Great Vibes',cursive;font-size:40px;color:var(--dark);margin-bottom:8px;}
+.lluvia-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+
+/* ── ALBUM ── */
+.album-card{background:var(--accent);border-radius:18px;padding:32px 24px;text-align:center;}
+.album-card .eyebrow{color:var(--gold-light);}
+.album-title{font-family:'Great Vibes',cursive;font-size:40px;color:#fff;margin:8px 0 14px;}
+.album-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;font-weight:500;color:rgba(255,255,255,.82);line-height:1.75;margin-bottom:20px;}
+
+/* ── FOTO MOMENTS ── */
+@keyframes levitate{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@media(prefers-reduced-motion:reduce){.photo-moment img{animation:none!important;}}
+.photo-moment{width:100%;line-height:0;}
+.photo-moment img{width:100%;height:auto;display:block;animation:levitate 5s ease-in-out infinite;}
+.photo-moment--portrait{padding:0 26px;}
+.photo-moment--portrait img{max-width:320px;display:block;margin:0 auto;border-radius:20px;box-shadow:0 16px 56px rgba(58,42,26,.18);animation:levitate 6s ease-in-out infinite;}
+.photo-moment:nth-child(odd) img{animation-duration:5.5s;}
+.photo-moment:nth-child(even) img{animation-duration:6.5s;animation-delay:.8s;}
+
+/* ── RSVP ── */
+.rsvp-card{background:var(--card);border-radius:18px;padding:28px 22px;box-shadow:0 6px 36px rgba(58,42,26,.08);}
+.rsvp-intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;font-weight:500;color:var(--text);text-align:center;line-height:1.75;margin-bottom:22px;}
+.btn-confirmar{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:17px;min-height:54px;
+  background:linear-gradient(135deg,#5a3e22 0%,#9a7a4a 50%,#5a3e22 100%);
+  background-size:200% 100%;color:#fff;
+  border-radius:30px;border:none;cursor:pointer;touch-action:manipulation;
+  font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;
+  font-style:italic;letter-spacing:3px;text-transform:uppercase;
+  transition:background-position .5s ease,transform .25s ease,box-shadow .25s ease;
+  box-shadow:0 4px 22px rgba(154,122,74,.3);
+  text-decoration:none;
+}
+.btn-confirmar:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 8px 30px rgba(154,122,74,.45);}
+.rsvp-deadline{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;color:var(--gold);margin-top:14px;opacity:.85;}
+
+/* ── ENVELOPE ── */
+#envelope-screen{position:fixed;inset:0;z-index:10000;overflow:hidden;cursor:pointer;opacity:0;background:#3a2a1a;}
+#env-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:2;transform:scale(1.18);}
+#env-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:3;opacity:0;transform:scale(1.18);}
+#env-flash{position:fixed;inset:0;background:#fff;z-index:9999;opacity:0;pointer-events:none;}
+.envelope-hint{
+  position:absolute;bottom:52px;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;
+  color:rgba(207,193,175,0.85);opacity:0;cursor:pointer;white-space:nowrap;z-index:10;
+}
+.envelope-hint::after{content:'';display:block;width:32px;height:1px;background:linear-gradient(90deg,transparent,rgba(154,122,74,0.7),transparent);margin:10px auto 0;animation:hintPulse 2.2s ease-in-out infinite;}
+@keyframes hintPulse{0%,100%{opacity:.4;width:32px;}50%{opacity:1;width:54px;}}
+#loader{display:none;}
+
+/* ── FOOTER ── */
+footer{padding:50px 20px;text-align:center;}
+footer .fn{font-family:'Great Vibes',cursive;font-size:52px;color:var(--dark);}
+footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:6px;}
+footer .fc{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:400;letter-spacing:2px;color:var(--text);opacity:.45;margin-top:18px;}
+footer .fc a{color:inherit;text-decoration:none;}
+
+/* ── VINIL / MÚSICA ── */
+.vinyl-btn{
+  position:fixed;bottom:20px;right:20px;z-index:998;
+  width:72px;height:72px;border-radius:50%;padding:0;
+  border:none;cursor:pointer;background:transparent;
+  opacity:0;transform:scale(.6);pointer-events:none;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);
+  box-shadow:0 4px 18px rgba(0,0,0,.45),0 0 0 1px rgba(154,122,74,.12);
+}
+.vinyl-btn.is-ready{opacity:1;transform:scale(1);pointer-events:auto;}
+.vinyl-btn:hover{transform:scale(1.1);}
+.vinyl-spin{width:100%;height:100%;border-radius:50%;position:relative;transition:none;}
+.vinyl-btn.is-playing .vinyl-spin{animation:vinylSpin 1.8s linear infinite;}
+@keyframes vinylSpin{to{transform:rotate(360deg);}}
+.vinyl-disc{
+  width:100%;height:100%;border-radius:50%;overflow:hidden;position:relative;
+  background:
+    radial-gradient(circle,#0A0F26 4%,transparent 4.5%),
+    radial-gradient(circle,#cfc1af 0%,#9a7a4a 17%,#6a4a20 19%,transparent 19.5%),
+    repeating-radial-gradient(circle,
+      transparent 20%,rgba(255,255,255,.055) 20.8%,transparent 21.5%,
+      transparent 28%,rgba(255,255,255,.055) 28.8%,transparent 29.5%,
+      transparent 36%,rgba(255,255,255,.055) 36.8%,transparent 37.5%,
+      transparent 44%,rgba(255,255,255,.055) 44.8%,transparent 45.5%,
+      transparent 52%,rgba(255,255,255,.04)  52.8%,transparent 53.5%
+    ),
+    radial-gradient(circle,#0A0F26 0%,#111828 60%,#0A0F26 100%);
+  box-shadow:inset 0 0 8px rgba(0,0,0,.4);
+}
+.vinyl-sheen{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,transparent 30%,rgba(255,255,255,.09) 42%,rgba(255,255,255,.15) 48%,rgba(255,255,255,.09) 54%,transparent 66%);pointer-events:none;}
+.vinyl-label-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Great Vibes',cursive;font-size:11px;color:#0A0F26;text-align:center;line-height:1.1;opacity:.75;pointer-events:none;width:28px;}
+.vinyl-label-text small{font-family:'Montserrat',sans-serif;font-size:5px;letter-spacing:.15em;display:block;margin-top:1px;opacity:.6;}
+.vinyl-hole{position:absolute;top:50%;left:50%;width:6px;height:6px;transform:translate(-50%,-50%);border-radius:50%;background:#0A0F26;box-shadow:0 0 0 1.5px rgba(154,122,74,.4);}
+.vinyl-icons{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:18px;height:18px;pointer-events:none;z-index:2;}
+.vinyl-icons svg{width:100%;height:100%;display:block;}
+.vinyl-icon-pause{display:none;}
+.vinyl-btn.is-playing .vinyl-icon-play{display:none;}
+.vinyl-btn.is-playing .vinyl-icon-pause{display:block;}
+.vinyl-btn::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--gold);opacity:.3;animation:vinylPulse 3s ease-in-out infinite;}
+.vinyl-btn.is-playing::after{animation-duration:1.6s;}
+@keyframes vinylPulse{0%,100%{transform:scale(1);opacity:.3;}50%{transform:scale(1.12);opacity:.05;}}
+.vinyl-tonearm{position:absolute;top:-4px;right:-2px;width:24px;height:34px;transform-origin:top right;transform:rotate(-28deg);transition:transform .6s cubic-bezier(.2,.7,.2,1);pointer-events:none;z-index:1;}
+.vinyl-btn.is-playing .vinyl-tonearm{transform:rotate(-12deg);}
+.vinyl-tonearm-line{position:absolute;top:2px;right:4px;width:2px;height:28px;background:linear-gradient(to bottom,#6a4a20,#9a7a4a 40%,#6a4a20);border-radius:1px;transform:rotate(-5deg);transform-origin:top center;}
+.vinyl-tonearm-head{position:absolute;bottom:0;right:2px;width:5px;height:6px;background:#9a7a4a;border-radius:0 0 2px 2px;}
+.vinyl-tonearm-pivot{position:absolute;top:0;right:2px;width:7px;height:7px;background:radial-gradient(circle,#cfc1af,#6a4a20);border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+</style>
+</head>
+<body>
+
+<!-- ENVELOPE -->
+<div id="envelope-screen" role="button" aria-label="Toca para abrir tu invitación">
+  <img id="env-image" src="./sobre.png" alt="Invitación Guillermo y Fernanda">
+  <video id="env-video" src="./sobre-apertura.mp4" playsinline webkit-playsinline muted preload="auto"></video>
+  <p class="envelope-hint" id="env-hint">Toca para abrir</p>
+</div>
+<div id="env-flash"></div>
+
+<!-- PARTÍCULAS CHAMPAGNE -->
+<div id="stars"></div>
+
+<div class="wrap" style="visibility:hidden">
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-bg"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-bottom">
+      <div class="hero-eyebrow" id="hEb">Sábado · 4 de Julio · 2026</div>
+      <h1 class="hero-names" id="hNm">
+        Guillermo
+        <span class="hero-amp">&amp;</span>
+        Fernanda
+      </h1>
+      <div class="hero-badge" id="hBd">
+        <span>Matamoros · Tamaulipas</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- FECHA -->
+  <div class="fecha-sec rv">
+    <div class="fecha-line">
+      <div class="fl-bar"></div>
+      <div class="fecha-txt">4 · Julio · 2026</div>
+      <div class="fl-bar right"></div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <section id="scd" class="rv">
+    <div class="eyebrow">¡Ya Falta Poco!</div>
+    <h2 class="sec-title">Cuenta Regresiva</h2>
+    <div class="cd-row">
+      <div class="cd-box"><div class="cd-num" id="cdD">000</div><div class="cd-lbl">Días</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdH">00</div><div class="cd-lbl">Horas</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdM">00</div><div class="cd-lbl">Mins</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdS">00</div><div class="cd-lbl">Segs</div></div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- NUESTRO MENSAJE -->
+  <section class="rv" id="smensaje">
+    <div class="eyebrow">Queremos que te diviertas</div>
+    <h2 class="sec-title">Acompáñanos</h2>
+    <div class="mensaje-card">
+      <p class="mensaje-texto">
+        "Queremos compartir con las personas que más amamos este momento tan especial. Únete a nosotros en nuestra fiesta y celebra con nosotros el comienzo de una nueva historia."
+      </p>
+      <span class="mensaje-firma">Guillermo &amp; Fernanda</span>
+    </div>
+  </section>
+
+  <!-- FOTO 1 — post-mensaje -->
+  <div class="photo-moment photo-moment--cinema rv">
+    <img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/b4b7737b-1a85-4c1c-99c0-baa28121c0c2/1779772556606-3.jpeg" alt="Guillermo y Fernanda" loading="lazy">
+  </div>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- UBICACIÓN — solo recepción -->
+  <section id="subic">
+    <h2 class="sec-title rv">La Celebración</h2>
+    <div class="loc-card rv" id="lc1">
+      <div class="lt">Recepción</div>
+      <div class="ls">Fiesta · Celebración · Baile</div>
+      <div class="lh">6:30 pm</div>
+      <p style="margin-top:10px;">Matamoros, Tamaulipas</p>
+      <a class="btn" href="https://share.google/Jtk3rOzTgmwdPdYP9" target="_blank" rel="noopener">Cómo Llegar</a>
+    </div>
+  </section>
+
+  <!-- FOTO 2 — portrait post-ubicación -->
+  <div class="photo-moment photo-moment--portrait rv">
+    <img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/b4b7737b-1a85-4c1c-99c0-baa28121c0c2/1779772568157-0.jpeg" alt="Guillermo y Fernanda" loading="lazy">
+  </div>
+
+  <!-- CALENDAR -->
+  <section class="rv cal-c" id="scal">
+    <div class="eyebrow">No lo Olvides</div>
+    <h2 class="sec-title">Guárdalo</h2>
+    <p>Agrega el evento a tu calendario</p>
+    <a class="btn" id="gcalBtn" href="#" target="_blank" rel="noopener">Añadir a Google Calendar</a>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- ITINERARIO -->
+  <section id="siti">
+    <div class="eyebrow rv">El Gran Día</div>
+    <h2 class="sec-title rv">Itinerario</h2>
+    <div class="itv3">
+      <div class="itv3-track"></div>
+      <div class="itv3-glow" id="itvGlow"></div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem"></div>
+        <div class="itv3-time">6:30</div>
+        <div class="itv3-ev">Recepción en Salón</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem itv3-gem-gray"></div>
+        <div class="itv3-time">7:30</div>
+        <div class="itv3-ev">Cena</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem itv3-gem-mid"></div>
+        <div class="itv3-time">8:00</div>
+        <div class="itv3-ev">Sorpresa</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem itv3-gem-gray"></div>
+        <div class="itv3-time">8:15</div>
+        <div class="itv3-ev">Brindis de los Prometidos</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem"></div>
+        <div class="itv3-time">8:30</div>
+        <div class="itv3-ev">Baile</div>
+        <div class="itv3-sub">¡A celebrar!</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO 3 — wide post-itinerario -->
+  <div class="photo-moment photo-moment--wide rv">
+    <img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/b4b7737b-1a85-4c1c-99c0-baa28121c0c2/1779772576096-0.jpeg" alt="Guillermo y Fernanda" loading="lazy">
+  </div>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- DRESS CODE -->
+  <section class="rv" id="sdc">
+    <div class="eyebrow">Etiqueta</div>
+    <h2 class="sec-title">Dress Code</h2>
+    <div class="dc-note">Semiformal</div>
+    <div class="dc-warn">✦ &nbsp; Reservar el blanco para la novia &nbsp; ✦</div>
+    <div class="dc-figures" id="dcFigs">
+      <div class="dc-fig">
+        <div class="dc-fig-name">Caballero</div>
+        <div class="dc-fig-hint">Traje o Saco<br>Pantalón Formal</div>
+      </div>
+      <div class="dc-divider" aria-hidden="true"></div>
+      <div class="dc-fig">
+        <div class="dc-fig-name">Dama</div>
+        <div class="dc-fig-hint">Vestido Semiformal<br>Cocktail o Largo</div>
+      </div>
+    </div>
+    <div class="dc-swatch-wrap rv">
+      <div style="text-align:center;">
+        <span class="dc-swatch" style="background:#2e063d;" title="Morado oscuro"></span>
+        <div class="dc-swatch-label">Sugerido</div>
+      </div>
+    </div>
+    <p class="dc-avoid rv">Evitar: tonos muy claros tipo crema pálido</p>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- FOTO 4 — post-dress code -->
+  <div class="photo-moment rv">
+    <img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/b4b7737b-1a85-4c1c-99c0-baa28121c0c2/1779772583465-0.jpeg" alt="Guillermo y Fernanda" loading="lazy">
+  </div>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- SOLO ADULTOS — OBLIGATORIA -->
+  <section class="rv" id="skids">
+    <div class="eyebrow">Con Todo Nuestro Cariño</div>
+    <h2 class="sec-title">Solo Adultos</h2>
+    <div class="kids-card">
+      <p>
+        Hemos decidido que nuestra celebración sea exclusiva para adultos.
+        Confiamos en que esta noche podrás disfrutar con nosotros sin preocupaciones.
+        ¡Gracias por tu comprensión!
+      </p>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- MESA DE REGALOS — lluvia de sobres — OBLIGATORIA -->
+  <section class="rv" id="sgifts">
+    <div class="eyebrow">Con Cariño</div>
+    <h2 class="sec-title">Mesa de Regalos</h2>
+    <p class="gift-intro">
+      Tu presencia es nuestro mejor regalo.<br>
+      Si además deseas obsequiarnos algo, contaremos con lluvia de sobres el día de la celebración.
+    </p>
+    <div class="lluvia-card rv">
+      <div style="margin-bottom:16px;">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="16" width="40" height="28" rx="3" fill="#9a7a4a" opacity=".12"/>
+          <rect x="6" y="16" width="40" height="28" rx="3" stroke="#9a7a4a" stroke-width="1.6" fill="none"/>
+          <polyline points="6,16 26,34 46,16" fill="none" stroke="#9a7a4a" stroke-width="1.6" stroke-linejoin="round"/>
+          <line x1="6" y1="44" x2="20" y2="29" stroke="#9a7a4a" stroke-width="1.3" opacity=".5"/>
+          <line x1="46" y1="44" x2="32" y2="29" stroke="#9a7a4a" stroke-width="1.3" opacity=".5"/>
+        </svg>
+      </div>
+      <div class="lluvia-title">Lluvia de Sobres</div>
+      <div class="lluvia-sub">El día de la celebración</div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- ÁLBUM COMPARTIDO — OBLIGATORIA -->
+  <section class="rv" id="salbum" style="padding:40px 26px;">
+    <div class="album-card">
+      <div class="eyebrow" style="color:var(--gold-light);">Comparte el Momento</div>
+      <div class="album-title">Álbum Compartido</div>
+      <p class="album-text">
+        Después del evento, sube tus fotos y videos a nuestro álbum compartido.
+        Será nuestro recuerdo colectivo de esta noche especial.
+      </p>
+      <!-- PENDIENTE: link álbum compartido y QR -->
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(255,255,255,.55);letter-spacing:2px;">Link disponible próximamente</p>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 220 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line class="orn-line" x1="0" y1="12" x2="86" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <line class="orn-line" x1="134" y1="12" x2="220" y2="12" stroke="#9a7a4a" stroke-width=".55"/>
+      <circle class="orn-dot" cx="91" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="97" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="103" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="117" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <circle class="orn-dot" cx="123" cy="12" r="1.7" fill="#9a7a4a" opacity=".58"/>
+      <circle class="orn-dot" cx="129" cy="12" r="1.2" fill="#9a7a4a" opacity=".4"/>
+      <path class="orn-star" d="M110,5 C114,9 114,15 110,19 C106,15 106,9 110,5Z M103,12 C107,8 113,8 117,12 C113,16 107,16 103,12Z" fill="#9a7a4a"/>
+    </svg>
+  </div>
+
+  <!-- RSVP — botón único WhatsApp -->
+  <section class="rv" id="srsvp">
+    <div class="eyebrow">Confirma tu Asistencia</div>
+    <h2 class="sec-title">R.S.V.P.</h2>
+    <div class="rsvp-card">
+      <p class="rsvp-intro">
+        Confírmanos tu asistencia antes del<br>
+        <strong style="font-style:normal;color:var(--dark);">14 de junio de 2026</strong>
+      </p>
+      <a class="btn-confirmar" id="rsvpWaBtn" href="#" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Confirmar Asistencia
+      </a>
+      <p class="rsvp-deadline">Fecha límite: 14 de junio de 2026</p>
+    </div>
+  </section>
+
+  <!-- FOOTER — OBLIGATORIA -->
+  <footer>
+    <div class="fn">Guillermo &amp; Fernanda</div>
+    <div class="fd">4 · Julio · 2026 · Matamoros, Tam.</div>
+    <div class="fc">Invitación creada por <a href="https://www.instagram.com/elysium.invitaciones" target="_blank" rel="noopener">@elysium.invitaciones</a></div>
+  </footer>
+
+</div>
+
+<!-- MÚSICA / VINIL -->
+<button class="vinyl-btn" id="music-btn" aria-label="Reproducir música">
+  <div class="vinyl-spin">
+    <div class="vinyl-disc">
+      <div class="vinyl-sheen"></div>
+      <div class="vinyl-label-text">G&amp;F<small>♪</small></div>
+      <div class="vinyl-hole"></div>
+    </div>
+    <div class="vinyl-icons" aria-hidden="true">
+      <svg class="vinyl-icon-play" viewBox="0 0 24 24" fill="#cfc1af"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="vinyl-icon-pause" viewBox="0 0 24 24" fill="#cfc1af"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </div>
+  </div>
+  <div class="vinyl-tonearm">
+    <div class="vinyl-tonearm-pivot"></div>
+    <div class="vinyl-tonearm-line"></div>
+    <div class="vinyl-tonearm-head"></div>
+  </div>
+</button>
+<!-- AUDIO desde Supabase — preload="none" para evitar egress en Vercel -->
+<audio id="music" loop preload="none">
+  <source src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-guillermo-y-fernanda/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.scrollTo(0,0);
+history.scrollRestoration='manual';
+gsap.registerPlugin(ScrollTrigger);
+
+/* ── RSVP botón único WhatsApp ── */
+(function(){
+  var waMsg = '¡Hola! Con mucho gusto confirmo mi asistencia a la celebración de Guillermo David Quintero Salazar y Fernanda Lara Torres. 🎉 ¡Nos vemos pronto! 💫';
+  var waUrl = 'https://wa.me/528341012950?text=' + encodeURIComponent(waMsg);
+  var btn = document.getElementById('rsvpWaBtn');
+  if(btn) btn.href = waUrl;
+})();
+
+/* ── ENVELOPE ── */
+(function(){
+  var envScreen = document.getElementById('envelope-screen');
+  var envImage  = document.getElementById('env-image');
+  var envVideo  = document.getElementById('env-video');
+  var envFlash  = document.getElementById('env-flash');
+  var hint      = document.getElementById('env-hint');
+  var opened    = false;
+
+  var testImg = new Image();
+  testImg.onload = function(){
+    gsap.timeline()
+      .to(envScreen, {opacity:1, duration:1.2, ease:'power2.out', delay:0.3})
+      .to(hint,      {opacity:1, duration:0.9, ease:'power2.out'}, '-=0.5');
+    gsap.to(hint, {scale:1.07, duration:1.6, ease:'sine.inOut', repeat:-1, yoyo:true, delay:2});
+  };
+  testImg.onerror = function(){
+    envScreen.style.display = 'none';
+    document.querySelector('.wrap').style.visibility = 'visible';
+    launchPage();
+  };
+  testImg.src = './sobre.png';
+
+  var flashStarted = false, invitationReady = false;
+
+  function prepareInvitation(){
+    if(invitationReady) return;
+    invitationReady = true;
+    envScreen.style.display = 'none';
+    document.querySelector('.wrap').style.visibility = 'visible';
+    launchPage();
+  }
+  function revealInvitation(){
+    prepareInvitation();
+    gsap.to(envFlash, {opacity:0, duration:1.2, ease:'power2.out',
+      onComplete:function(){ envFlash.style.display='none'; }});
+  }
+
+  envVideo.addEventListener('timeupdate', function(){
+    if(!flashStarted && envVideo.duration && envVideo.currentTime >= envVideo.duration - 2){
+      flashStarted = true;
+      gsap.to(envFlash, {opacity:1, duration:1, ease:'power2.in', onComplete:revealInvitation});
+    }
+  });
+  envVideo.addEventListener('ended', function(){ gsap.set(envFlash,{opacity:1}); revealInvitation(); });
+
+  function openEnvelope(){
+    if(opened) return; opened = true;
+    gsap.killTweensOf([envImage, hint]);
+    gsap.to(hint, {opacity:0, duration:0.2});
+    var p = envVideo.play();
+    gsap.to(envImage, {opacity:0, duration:0.55, ease:'power2.inOut', onComplete:function(){ envImage.style.display='none'; }});
+    gsap.to(envVideo, {opacity:1, duration:0.55, ease:'power2.inOut'});
+    if(p !== undefined) p.catch(function(){ revealInvitation(); });
+  }
+  envScreen.addEventListener('click', openEnvelope);
+  envScreen.addEventListener('touchstart', function(e){ e.preventDefault(); openEnvelope(); }, {passive:false});
+}());
+
+/* ── HERO ENTRANCE ── */
+function launchPage(){
+  var tl = gsap.timeline({defaults:{ease:'power2.out'}});
+  tl.to('#hEb', {opacity:1, duration:1.2, delay:0.3})
+    .to('#hNm', {opacity:1, y:0, duration:1.8, ease:'power3.out'}, '-=0.8')
+    .to('#hBd', {opacity:1, y:0, duration:1.2}, '-=1');
+  initStars(); initScrollReveal(); initItinerary(); initDressCode(); tryAutoMusic();
+}
+
+/* ── PARTÍCULAS CHAMPAGNE ── */
+function initStars(){
+  var layer = document.getElementById('stars');
+  var colors = ['#9a7a4a','#cfc1af','#d4b87e','#e8dece','#7a5a30'];
+  for(var i=0; i<24; i++){
+    var s = document.createElement('div');
+    s.className = 'star';
+    var sz = 5 + Math.random()*7;
+    s.style.cssText='width:'+sz+'px;height:'+sz+'px;background:'+colors[i%colors.length]+';left:'+Math.random()*100+'%;';
+    layer.appendChild(s); animStar(s);
+  }
+}
+function animStar(s){
+  var h = window.innerHeight;
+  gsap.set(s,{y:-20,x:0,opacity:0,rotation:Math.random()*360});
+  gsap.timeline({delay:Math.random()*18})
+    .to(s,{opacity:0.5,duration:2.5,ease:'none'})
+    .to(s,{y:h+40,x:(Math.random()*100)-50,rotation:'+='+(180+Math.random()*280),
+        duration:22+Math.random()*20,ease:'none',
+        onComplete:function(){ gsap.set(s,{left:Math.random()*100+'%',x:0}); animStar(s); }
+    },'<');
+}
+
+/* ── SCROLL REVEAL ── */
+function initScrollReveal(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    gsap.fromTo(el,{y:36,opacity:0},{y:0,opacity:1,duration:1.3,ease:'power2.out',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+}
+
+/* ── ITINERARIO ── */
+function initItinerary(){
+  var glow = document.getElementById('itvGlow');
+  var section = document.getElementById('siti');
+  var items = document.querySelectorAll('.itv3-item');
+  if(!glow||!section) return;
+  ScrollTrigger.create({trigger:section,start:'top 58%',end:'bottom 42%',scrub:1.8,
+    onUpdate:function(self){
+      var track=section.querySelector('.itv3-track');
+      if(!track) return;
+      var h=track.offsetHeight-55;
+      glow.style.top=(self.progress*h)+'px';
+    }
+  });
+  items.forEach(function(item){
+    var gem=item.querySelector('.itv3-gem');
+    var isGray=gem.classList.contains('itv3-gem-gray');
+    var gc=isGray?'160,160,160':'207,193,175';
+    gsap.fromTo(gem,{scale:0,opacity:0},{scale:1,opacity:1,duration:0.6,ease:'back.out(2.8)',
+      scrollTrigger:{trigger:item,start:'top 86%',once:true},
+      onComplete:function(){
+        gsap.timeline()
+          .to(gem,{scale:1.4,filter:'drop-shadow(0 0 20px rgba('+gc+',1))',duration:0.3,ease:'power2.out'})
+          .to(gem,{scale:1,  filter:'drop-shadow(0 0 5px rgba('+gc+',0.35))',duration:0.28,ease:'power2.in'})
+          .to(gem,{scale:1.2,filter:'drop-shadow(0 0 14px rgba('+gc+',0.8))',duration:0.22,ease:'power2.out'})
+          .to(gem,{scale:1,  filter:'drop-shadow(0 0 4px rgba('+gc+',0.25))',duration:0.32,ease:'power2.in'});
+      }
+    });
+    var els=[item.querySelector('.itv3-time'),item.querySelector('.itv3-ev'),item.querySelector('.itv3-sub')].filter(Boolean);
+    gsap.fromTo(els,{y:14,opacity:0},{y:0,opacity:1,duration:0.8,ease:'power2.out',stagger:0.08,
+      scrollTrigger:{trigger:item,start:'top 86%',once:true}});
+  });
+}
+
+/* ── DRESS CODE ── */
+function initDressCode(){
+  var sdc=document.getElementById('sdc');
+  if(!sdc) return;
+  var glowLayer=document.createElement('div'); glowLayer.className='dc-glow-layer'; sdc.insertBefore(glowLayer,sdc.firstChild);
+  var starLayer=document.createElement('div'); starLayer.className='dc-star-layer'; sdc.insertBefore(starLayer,sdc.firstChild);
+  var syms=['✦','✧','⋆','✶','·','✹'];
+  var starTimer=null;
+  function spawnStar(){
+    var el=document.createElement('span'); el.className='dc-sparkle';
+    el.textContent=syms[Math.floor(Math.random()*syms.length)];
+    var x=3+Math.random()*94; var sz=10+Math.random()*18;
+    el.style.cssText='left:'+x+'%;bottom:-12px;font-size:'+sz+'px;';
+    starLayer.appendChild(el);
+    var flyY=-(70+Math.random()*220); var rot=Math.random()*200-100;
+    gsap.fromTo(el,{opacity:0,y:0,rotation:Math.random()*40-20,scale:.25},
+      {opacity:.95,y:flyY*0.45,rotation:rot*0.5,scale:1,duration:1.6+Math.random()*.9,ease:'power1.out',
+       onComplete:function(){
+         gsap.to(el,{opacity:0,y:flyY,duration:1.1,ease:'power2.in',
+           onComplete:function(){ if(el.parentNode) el.parentNode.removeChild(el); }});
+       }});
+  }
+  var entered=false;
+  ScrollTrigger.create({trigger:'#sdc',start:'top 80%',end:'bottom top',
+    onEnter:function(){
+      if(!entered){ entered=true;
+        gsap.fromTo('.dc-fig',{opacity:0,y:28},{opacity:1,y:0,duration:1,stagger:.22,ease:'power2.out'});
+        gsap.fromTo('.dc-divider',{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:1.2,ease:'power2.out',delay:.15});
+      }
+      if(!starTimer) starTimer=setInterval(spawnStar,320);
+    },
+    onLeave:function(){ clearInterval(starTimer); starTimer=null; },
+    onEnterBack:function(){ if(!starTimer) starTimer=setInterval(spawnStar,320); },
+    onLeaveBack:function(){ clearInterval(starTimer); starTimer=null; }
+  });
+}
+
+/* ── COUNTDOWN — 4 Jul 2026 6:30 PM CST (UTC-6 = UTC+18:30) ── */
+(function(){
+  var target = new Date('2026-07-05T00:30:00Z').getTime();
+  function tick(){
+    var d=target-Date.now();
+    if(d<=0){ ['cdD','cdH','cdM','cdS'].forEach(function(id){ document.getElementById(id).textContent='00'; }); return; }
+    document.getElementById('cdD').textContent=String(Math.floor(d/86400000)).padStart(3,'0');
+    document.getElementById('cdH').textContent=String(Math.floor(d%86400000/3600000)).padStart(2,'0');
+    document.getElementById('cdM').textContent=String(Math.floor(d%3600000/60000)).padStart(2,'0');
+    document.getElementById('cdS').textContent=String(Math.floor(d%60000/1000)).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ── GOOGLE CALENDAR ── */
+(function(){
+  var t=encodeURIComponent('Boda de Guillermo & Fernanda');
+  var d=encodeURIComponent('Recepcin: 6:30 pm — Matamoros, Tamaulipas');
+  var l=encodeURIComponent('Matamoros, Tamaulipas, México');
+  document.getElementById('gcalBtn').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+t+'&dates=20260705T003000Z/20260705T060000Z&details='+d+'&location='+l;
+})();
+
+/* ── PHOTO MOMENTS ── */
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.photo-moment').forEach(function(el){
+    gsap.fromTo(el,{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power2.out',
+      scrollTrigger:{trigger:el,start:'top 88%'}});
+  });
+})();
+
+/* ── MÚSICA desde Supabase ── */
+var musicEl=document.getElementById('music');
+var musicBtn=document.getElementById('music-btn');
+if(musicEl){
+  musicEl.addEventListener('play', function(){ musicBtn&&musicBtn.classList.add('is-playing'); });
+  musicEl.addEventListener('pause',function(){ musicBtn&&musicBtn.classList.remove('is-playing'); });
+}
+function showMusicBtn(){ if(musicBtn) musicBtn.classList.add('is-ready'); }
+if(musicBtn){
+  musicBtn.addEventListener('click',function(){
+    if(!musicEl) return;
+    if(musicEl.paused){ musicEl.play().catch(function(){}); }
+    else { musicEl.pause(); }
+  });
+}
+function tryAutoMusic(){
+  if(!musicEl) return;
+  showMusicBtn();
+  var p=musicEl.play();
+  if(p&&typeof p.catch==='function'){
+    p.catch(function(){
+      function onFirst(){ startMusic(); document.removeEventListener('click',onFirst); document.removeEventListener('touchstart',onFirst); document.removeEventListener('scroll',onFirst); }
+      document.addEventListener('click',onFirst,{once:true});
+      document.addEventListener('touchstart',onFirst,{once:true});
+      document.addEventListener('scroll',onFirst,{once:true});
+    });
+  }
+}
+function startMusic(){ showMusicBtn(); if(!musicEl) return; musicEl.play().catch(function(){}); }
+</script>
+</body>
+</html>

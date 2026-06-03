@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "boda-adry-y-heri",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3491", "."],
+      "port": 3491
+    }
+  ]
+}
